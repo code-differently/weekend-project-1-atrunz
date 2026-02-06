@@ -21,19 +21,20 @@ public class Main {
 
         RandomGenerations randomItem = new RandomGenerations();
 
+        //generate random item IDs
         int itemSelectionOne = randomItem.item();
         int itemSelectionTwo = randomItem.item();
         int itemSelectionThree = randomItem.item();
 
+        //generate random items for receipt
+        StoreItem item1 = new StoreItem(itemSelectionOne, randomItem.prices());
+        StoreItem item2 = new StoreItem(itemSelectionTwo, randomItem.prices());
+        StoreItem item3 = new StoreItem(itemSelectionThree, randomItem.prices());
 
-        StoreItem item1 = new StoreItem(1, randomItem.prices());
-        StoreItem item2 = new StoreItem(2, randomItem.prices());
-        StoreItem item3 = new StoreItem(3, randomItem.prices());
         System.out.println(item1.getName() + item1.getPrice());
         System.out.println(item2.getName() + item2.getPrice());
         System.out.println(item3.getName() + item3.getPrice());
-        System.out.println(item3.getName() + item3.getPrice());
-
+        System.out.println(0/100);
 
     }
 }
