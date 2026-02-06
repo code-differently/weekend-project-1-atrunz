@@ -53,11 +53,11 @@ public class ConsolePrint {
 
             //System.out.println("Your will receive: " + subTotal*(discountVal/100) + " off");
         }
-        System.out.println("Final Total + Tax: $" + finalTotal);
+        System.out.println("Final Total + Tax: $" + Math.round(finalTotal*100.0)/100.0);
         if(budget - finalTotal >= 0){
-            System.out.println("You have $" + (budget-finalTotal) + " remaining in your budget");
+            System.out.println("You have $" + Math.round((budget-finalTotal)*100.0)/100.0 + " remaining in your budget");
         }else{
-            System.out.println("You need $" + Math.abs(budget-finalTotal) + " more in your budget to complete this transaction");
+            System.out.println("You need $" + Math.round(Math.abs(budget-finalTotal))/100.0 + " more in your budget to complete this transaction");
         }
         //whether user can afford with their budget or if they are short
 

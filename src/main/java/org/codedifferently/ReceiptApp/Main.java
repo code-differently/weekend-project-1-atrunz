@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Please enter your coupon code: ");
         String couponCode = scanner.next();
 
-        //instantiate objects so we can use class methods
+        //instantiate objects so we can use their methods
         RandomGenerations randomItem = new RandomGenerations();
         PriceCalculations calculatePrice = new PriceCalculations();
         CouponChecker coupon = new CouponChecker();
@@ -41,7 +41,7 @@ public class Main {
         int itemSelectionTwo = randomItem.item();
         int itemSelectionThree = randomItem.item();
 
-        //generate random items for receipt mapped from ID's
+        //generate random items mapped from ID's
         StoreItem item1 = new StoreItem(itemSelectionOne, randomItem.prices());
         StoreItem item2 = new StoreItem(itemSelectionTwo, randomItem.prices());
         StoreItem item3 = new StoreItem(itemSelectionThree, randomItem.prices());
@@ -49,21 +49,25 @@ public class Main {
         //store item prices in an array to use with subtotal method
         double[] itemPrices = {item1.getPrice(), item2.getPrice(), item3.getPrice()};
 
+        //calculate sum of item prices
         double subTotal = calculatePrice.subtotal(itemPrices);
 
+        //calculate price after incorporating fee/lucky discount, tax, etc..
         double subFinalTotal = calculatePrice.finalTotal(subTotal, isDiscount, fee, taxRate, discountRate);
 
-
+        //generate random visitID
         int visitID = randomItem.visitIDGen();
 
+        //generate receiptCode
         String fullReceiptCode = randomItem.receiptCode(username, visitID);
 
+        //check whether coupon is valid
         boolean isValidCoupon = coupon.couponCheck(couponCodes, couponCode);
 
-        //should compute the discount value
+        //if coupon is valid, assigns the discount value
         int discountVal = coupon.discountRate(isValidCoupon, couponCodes, couponCode);
 
-
+        //calculate final total after all coupons, taxes, fees, etc. applied
         double finalTotal = coupon.applyCoupon(isValidCoupon, subFinalTotal, discountVal);
 
         //moved all print statements and print logic into a class called console print

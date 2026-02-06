@@ -1,6 +1,7 @@
 package org.codedifferently.ReceiptApp;
 
 public class PriceCalculations {
+
     public double subtotal(double[] prices){
         double subtotal = 0.0;
         for (int i=0; i<prices.length; i++){
@@ -8,9 +9,11 @@ public class PriceCalculations {
         }
         return subtotal;
     }
+
     public double tax(double billPrice, double taxPercent){
         return billPrice*(taxPercent/100);
     }
+
     public double extraValues(double subTotal, boolean discount, double fee, double discountPercent){
 
         if (discount){
@@ -20,6 +23,7 @@ public class PriceCalculations {
         }
 
     }
+
     public double finalTotal(double subtotal, boolean discount, double fee, double taxPercent, double discountPercent){
         //round
         double subtotalPostFee = extraValues(subtotal, discount, fee, discountPercent);
