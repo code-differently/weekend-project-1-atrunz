@@ -65,50 +65,49 @@ public class Main {
 
         int visitID = randomItem.visitIDGen();
 
-        String fullReceiptCode = receiptCode + visitID;
+        String fullReceiptCode = receiptCode + "-" + visitID;
 
 
 
         if (isValidCoupon){
             finalTotal = finalTotal - (finalTotal*discountVal/100);
         }
-        System.out.println(item2.getName() + item2.getPrice());
-        System.out.println(item3.getName() + item3.getPrice());
 
-        System.out.println(finalTotal);
 
-        System.out.println("Thank You For Shopping At Alex's Electronics");
-        System.out.println("Your visit ID is: " + visitID);
-        System.out.println("Your receipt code is: " + fullReceiptCode);
-        System.out.println("Your first item is: " + item1.getName() + "\nThe price is: $" + item1.getPrice());
-        System.out.println("Your second item is: " + item2.getName() + "\nThe price is: $" + item2.getPrice());
-        System.out.println("Your third item is: " + item3.getName() + "\nThe price is: $" + item3.getPrice());
-        System.out.println("Your subtotal is: $" + subTotal);
+        System.out.println("--------- Welcome to Alex's Electronics ----------");
+        System.out.println("Visit ID: " + visitID);
+        System.out.println("Receipt Code: " + fullReceiptCode);
+        System.out.println(item1.getName() + ": $" + item1.getPrice());
+        System.out.println(item2.getName() + ": $" + item2.getPrice());
+        System.out.println(item3.getName() + ": $" + item3.getPrice());
+        System.out.println("Subtotal: $" + subTotal);
+        System.out.println("Sales Tax: " + taxRate +"%");
+
         if(isDiscount){
-            System.out.println("You received a random discount! Congratulations!");
-            System.out.println("Your discount is: " + discountRate + "%");
+            System.out.println("--------- You received a lucky discount! ---------");
+            System.out.println("Lucky Discount: " + discountRate + "%");
             subTotal = calculatePrice.extraValues(subTotal, true, 0, discountRate);
-            System.out.println("Your new subtotal is: $" + subTotal);
+            System.out.println("New Subtotal: $" + subTotal);
             //System.out.println("You will receive: " + subTotal*(discountRate/100) + " off");
 
         }else{
-            System.out.println("We have placed a small processing fee on your order of: " + "$" + fee);
+            System.out.println("--------- A small processing fee was added to your order---------");
+            System.out.println("Processing Fee: " + "$" + fee);
             subTotal =  calculatePrice.extraValues(subTotal, false, fee, 0);
-            System.out.println("Your new subtotal is: $" + subTotal);
+            System.out.println("New Subtotal: $" + subTotal);
         }
         if(isValidCoupon){
-            System.out.println("Your coupon code has been accepted!");
-            System.out.println("Your discount is: " + discountVal + "%");
+            System.out.println("---------- Coupon Code *" + couponCode.toUpperCase() + "* Accepted ----------");
+            System.out.println("Discount: " + discountVal + "%");
             subTotal = calculatePrice.extraValues(subTotal, true, 0, discountVal);
-            System.out.println("Your new subtotal is: $" + subTotal);
+            System.out.println("New Subtotal: $" + subTotal);
             //System.out.println("Your will receive: " + subTotal*(discountVal/100) + " off");
         }
-        System.out.println("Your tax rate is: " + taxRate +"%");
-        System.out.println("Your total charge is: $" + finalTotal);
+        System.out.println("Final Total: $" + finalTotal);
         if(budget - finalTotal >= 0){
             System.out.println("You have $" + (budget-finalTotal) + " remaining in your budget");
         }else{
-            System.out.println("You need $" + Math.abs(budget-finalTotal) + " more in your budget to complete this purchase");
+            System.out.println("You need $" + Math.abs(budget-finalTotal) + " more in your budget to complete this transaction");
         }
         //whether user can afford with their budget or if they are short
 
