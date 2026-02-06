@@ -47,4 +47,19 @@ public class RandomGenerations {
         }
 
     }
+
+    public String receiptCode(String username, int visitID){
+
+        String receiptCode;
+        if (username.length() < 5){
+            receiptCode = username.toUpperCase();
+        }else{
+            receiptCode = username.substring(0, 4).toUpperCase();
+        }
+
+        String fullReceiptCode = receiptCode + "-" + visitID;
+
+        return fullReceiptCode;
+    }
+
 }

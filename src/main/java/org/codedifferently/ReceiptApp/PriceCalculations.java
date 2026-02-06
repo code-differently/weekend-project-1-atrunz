@@ -29,4 +29,5 @@ public class PriceCalculations {
         //multiply value of math.round by 100.0, then divide by 100.0 to get rounded value at 2 decimals
         return Math.round((subtotalPostFee + taxValue) * 100.0) / 100.0;
     }
+
 }
