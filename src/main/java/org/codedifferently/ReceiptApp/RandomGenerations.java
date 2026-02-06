@@ -23,7 +23,7 @@ public class RandomGenerations {
 
     public double tax() {
         Random rand = new Random();
-        double taxRate = rand.nextDouble(101);
+        double taxRate = rand.nextDouble(31);
         return taxRate;
     }
 
