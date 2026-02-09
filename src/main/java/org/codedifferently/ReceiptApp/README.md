@@ -53,18 +53,18 @@ Please enter your coupon code:
 --------- Welcome to Alex's Electronics ----------
 Visit ID: 5120
 Receipt Code: COOL-5120
-iPhone: $875.29
-Macbook: $1125.86
-Meta Glasses: $1120.44
-Subtotal: $3121.59
+iPhone: \$875.29
+Macbook: \$1125.86
+Meta Glasses: \$1120.44
+Subtotal: \$3121.59
 Sales Tax: 14.39%
 --------- A small processing fee was added to your order---------
-Processing Fee: $43.38
-New Subtotal: $3164.97
----------- Coupon Code *25OFF* Accepted ----------
+Processing Fee: \$43.38
+New Subtotal: \$3164.97
+---------- Coupon Code \*25OFF* Accepted ----------
 Discount: 25.0%
-New Subtotal: $2373.73
-Final Total + Tax: $2715.32
+New Subtotal: \$2373.73
+Final Total + Tax: \$2715.32
 You have $2284.68 remaining in your budget
 
 
