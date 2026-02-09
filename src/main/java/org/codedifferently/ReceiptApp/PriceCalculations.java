@@ -2,6 +2,7 @@ package org.codedifferently.ReceiptApp;
 
 public class PriceCalculations {
 
+    //sum list of doubles
     public double subtotal(double[] prices){
         double subtotal = 0.0;
         for (int i=0; i<prices.length; i++){
@@ -10,10 +11,12 @@ public class PriceCalculations {
         return subtotal;
     }
 
+    //calculate cost of tax
     public double tax(double billPrice, double taxPercent){
         return billPrice*(taxPercent/100);
     }
 
+    //get cost after factoring in a fee or discount. cannot be charged a fee and discount at the same time by default
     public double extraValues(double subTotal, boolean discount, double fee, double discountPercent){
 
         if (discount){
@@ -24,6 +27,7 @@ public class PriceCalculations {
 
     }
 
+    //sum tax and values after factoring in discount, fees and taxes
     public double finalTotal(double subtotal, boolean discount, double fee, double taxPercent, double discountPercent){
         //round
         double subtotalPostFee = extraValues(subtotal, discount, fee, discountPercent);

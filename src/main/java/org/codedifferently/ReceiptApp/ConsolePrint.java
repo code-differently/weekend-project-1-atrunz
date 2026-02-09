@@ -1,5 +1,6 @@
 package org.codedifferently.ReceiptApp;
 
+//print console output
 public class ConsolePrint {
     public void printResults(int visitID, String fullReceiptCode, StoreItem item1, StoreItem item2, StoreItem item3, double subTotal, double taxRate, boolean isDiscount, double discountRate, double fee, boolean isValidCoupon, String couponCode, int discountVal, double finalTotal, double budget){
 
