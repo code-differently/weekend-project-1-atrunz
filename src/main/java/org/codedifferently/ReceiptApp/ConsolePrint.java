@@ -58,7 +58,7 @@ public class ConsolePrint {
         if(budget - finalTotal >= 0){
             System.out.println("You have $" + Math.round((budget-finalTotal)*100.0)/100.0 + " remaining in your budget");
         }else{
-            System.out.println("You need $" + Math.round(Math.abs(budget-finalTotal))/100.0 + " more in your budget to complete this transaction");
+            System.out.println("You need $" + Math.round(Math.abs(budget-finalTotal)*100.0)/100.0 + " more in your budget to complete this transaction");
         }
         //whether user can afford with their budget or if they are short
 
