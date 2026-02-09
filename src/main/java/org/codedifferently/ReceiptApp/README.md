@@ -1,6 +1,7 @@
-A completed README with:
+**Java Random Receipt Printer**
 
-How It Works
+**How It Works:**
+
 The programs uses sout and scanner to prompt the user for inputs 
 and collect those inputs. They are stored in variables to access later.
 
@@ -43,43 +44,66 @@ After considering this, the coupon is applied to update the final total. If the 
 Lastly, a method is called to handle all of the printing to console. All the variables just described are passed in as parameters so they can be referenced where needed. 
 
 
-Sample output:
+**Sample output:**
+
 Please enter your username:
+
 Coolloosh
+
 Please enter your budget:
+
 5000
+
 Please enter your coupon code:
+
 25off
---------- Welcome to Alex's Electronics ----------
+
+--------- Welcome to Alex's Electronics ---------
+
 Visit ID: 5120
+
 Receipt Code: COOL-5120
+
 iPhone: \$875.29
+
 Macbook: \$1125.86
+
 Meta Glasses: \$1120.44
+
 Subtotal: \$3121.59
+
 Sales Tax: 14.39%
+
 --------- A small processing fee was added to your order---------
+
 Processing Fee: \$43.38
+
 New Subtotal: \$3164.97
+
 ---------- Coupon Code \*25OFF* Accepted ----------
+
 Discount: 25.0%
+
 New Subtotal: \$2373.73
+
 Final Total + Tax: \$2715.32
+
 You have $2284.68 remaining in your budget
 
 
-Java Concepts Used
-Classes/Objects/Methods
+**Java Concepts Used:**
 
-Conditionals/Switch/If-else
+* Classes/Objects/Methods
 
-Math/String/Random Methods
+* Conditionals/Switch/If-else
 
-Scanner and taking user input
+* Math/String/Random Methods
 
-Data handling + processing 
+* Scanner and taking user input
 
-Class and method design/software design principles
+* Data handling + processing 
+
+* Class and method design/software design principles
 
 
 
